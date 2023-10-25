@@ -1,0 +1,30 @@
+{
+    "suggest.enablePreselect": false,
+    "suggest.enablePreview": true,
+    "suggest.floatEnable": true,
+    "suggest.numberSelect": true,
+
+    "coc.preferences.extensionUpdateCheck": "never",
+
+    "prettier.enable": false,
+    "prettier.requireConfig": true,
+
+    "eslint.probe": ["javascriptreact", "javascript", "typescriptreact", "typescript", "vue"],
+    "eslint.autoFixOnSave": true,
+    "eslint.fixOnSaveTimeout": 5000,
+
+    "languageserver": {
+        "terraform": {
+            "command": "terraform-lsp",
+            "filetypes": [
+                "terraform",
+                "tf"
+            ],
+            "initializationOptions": {},
+            "settings": {}
+        }
+    },
+    "jedi.enable": true,
+    "jedi.startupMessage": true,
+    "jedi.executable.command": "~/.anyenv/envs/pyenv/versions/neovim3/bin/jedi-language-server"
+}

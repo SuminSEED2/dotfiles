@@ -1,0 +1,10 @@
+vim.opt.patchmode = "" -- オリジナルファイルを作らない
+vim.opt.autowrite = false -- 自動保存無効
+vim.opt.backup = true -- バックアップファイルを作る
+vim.opt.writebackup = true -- ファイルの書き込みに成功したときバックアップファイルを削除する
+vim.opt.undofile = true -- undoファイル生成
+vim.opt.swapfile = true -- swapファイル生成
+vim.opt.updatetime = 300 -- この時間の間 (ミリ秒単位) 入力がなければスワップファイルがディスクに書き込まれる
+vim.cmd("set undodir=~/.config/nvim/tmp/undo")
+vim.cmd("set directory=~/.config/nvim/tmp/swap")
+vim.cmd("set backupdir=~/.config/nvim/tmp/backup")

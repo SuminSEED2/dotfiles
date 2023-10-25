@@ -1,0 +1,33 @@
+[user]
+    name = Yuki Sumiyoshi
+    email = smysyuk@gmail.com
+[core]
+    editor = nvim
+    ; autocrlf = true
+[color]
+    ui = true
+[credential]
+    helper = store
+    UseHttpPath = true
+[diff]
+    tool = vimdiff
+[difftool "vimdiff"]
+    cmd = "nvim -R -d -c \"wincmd l\" -d \"$LOCAL\" \"$REMOTE\""
+[merge]
+    tool = vimdiff
+[mergetool]
+    keepBackup = false
+[mergetool "vimdiff"]
+    cmd = "nvim -d -c \"4wincmd w | wincmd J\" \"$LOCAL\" \"$BASE\" \"$REMOTE\"  \"$MERGED\""
+    # cmd = "nvim -d $LOCAL $REMOTE $MERGED -c '$wincmd w' -c 'wincmd J'"
+[rerere]
+    enable = true
+[cola]
+    spellcheck = false
+[filter "lfs"]
+    required = true
+    clean = git-lfs clean -- %f
+    smudge = git-lfs smudge -- %f
+    process = git-lfs filter-process
+[includeIf "gitdir:~/organization/"]
+    path = ~/.organization.gitconfig
