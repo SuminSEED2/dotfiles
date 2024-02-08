@@ -1,0 +1,11 @@
+#!/bin/bash
+# 現在アクティブなウィンドウのIDを取得
+active_window=$(tmux display-message -p '#{window_id}')
+
+# 新しいウィンドウを作成
+for i in {1..8}; do
+    tmux new-window
+done
+
+# 元のウィンドウに戻る
+tmux select-window -t $active_window
